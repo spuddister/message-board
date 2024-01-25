@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form method="POST" action="/new">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        required
+        name="name"
+        id="name"
+        minlength="1"
+        maxlength="35"
+      />
+      <label for="message">Message</label>
+      <input
+        type="text"
+        required
+        name="message"
+        id="message"
+        minlength="1"
+        maxlength="140"
+      />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
