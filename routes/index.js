@@ -4,17 +4,17 @@ const messages = [
   {
     text: "First",
     user: "Steve",
-    added: new Date(),
+    added: new Date().toLocaleString(),
   },
   {
     text: "Hello World!",
     user: "David",
-    added: new Date(),
+    added: new Date().toLocaleString(),
   },
   {
     text: "Nice message board!",
     user: "Patricia",
-    added: new Date(),
+    added: new Date().toLocaleString(),
   },
 ];
 
@@ -31,7 +31,7 @@ router.post("/new", function (req, res, next) {
   messages.push({
     text: req.body.message,
     user: req.body.name,
-    added: new Date(),
+    added: new Date().toLocaleString(),
   });
   res.redirect("/");
 });

@@ -11,3 +11,7 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+.card {
+  margin-bottom: 2em;
+}

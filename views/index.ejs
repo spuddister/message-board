@@ -3,22 +3,32 @@
   <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
   </head>
   <body>
     <h1><%= title %></h1>
-    <form>
-      <button type="menu" href="/new">Create Message</button>
+    <form method="get" action="/new">
+      <button type="submit">Create Message</button>
     </form>
-    <ul>
-      <% messages.forEach((message)=>{%>
-      <li>
-        <ul>
-          <p><%= message.text%></p>
-          <p><%= message.user%></p>
-          <p><%= message.added%></p>
-        </ul>
-      </li>
-      <%})%>
-    </ul>
+    <div>
+      <% for(let i = messages.length-1; i >= 0; i--){%>
+      <div class="card">
+        <div class="float-right"><%= messages[i].added%></div>
+        <h4><%= messages[i].user%></h4>
+        <blockquote><%= messages[i].text%></blockquote>
+      </div>
+      <%}%>
+    </div>
   </body>
 </html>
