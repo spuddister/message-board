@@ -1,4 +1,4 @@
 # Mini Message Board Project
 
 
-Deployed at (iamyourmessageboard.adaptable.app/)[https://iamyourmessageboard.adaptable.app/].
+Deployed [here](https://iamyourmessageboard.adaptable.app/) on Adaptable.io.
